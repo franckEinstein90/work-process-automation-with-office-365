@@ -41,8 +41,8 @@ Private Function isOrderSlip(objAtt As Outlook.Attachment) As Boolean
             .IgnoreCase = False
             .Pattern = strPattern
     End With
-        
-    If regEx.Test(attName) Then isOrderList = True Else isOrderList = False
+    
+    isOrderSlip = regEx.Test(attName)
 End Function
 
 Private Function getOrderNumber(objAtt As Outlook.Attachment) As Long
